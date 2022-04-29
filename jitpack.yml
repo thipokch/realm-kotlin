@@ -1,6 +1,8 @@
 jdk:
    - openjdk11
 before_install:
+   - sudo apt install swig
+   - yes | sdkmanager "cmake;3.18.1"
    - git submodule update --init --recursive
    - cd packages
    - ./gradlew assemble
