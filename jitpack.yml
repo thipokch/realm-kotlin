@@ -4,7 +4,7 @@ before_install:
    - wget http://ufpr.dl.sourceforge.net/project/swig/swig/swig-4.0.2/swig-4.0.2.tar.gz
    - tar xvzf swig-4.0.2.tar.gz
    - cd swig-4.0.2
-   - wget http://ufpr.dl.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.tar.gz
+   - wget https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.gz
    - ./Tools/pcre-build.sh
    - ./configure --prefix=$HOME/swig
    - make clean && make && make install
