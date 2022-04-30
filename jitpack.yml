@@ -1,7 +1,12 @@
 jdk:
    - openjdk11
 before_install:
-   - apt-get -y install swig
+   - https://downloads.sourceforge.net/project/swig/swig/swig-4.0.2/swig-4.0.2.tar.gz
+   - tar xvzf swig-4.0.2.tar.gz
+   - cd swig-4.0.2
+   - ./configure --prefix=$HOME/swig
+   - make clean && make && make install
+   - export SWIG_PATH=$HOME/swig/bin/swig
    - yes | sdkmanager "cmake;3.18.1"
    - git submodule update --init --recursive
    - cd packages
